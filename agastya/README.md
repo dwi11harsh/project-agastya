@@ -45,6 +45,36 @@ agastya/
 └── tests/                  # All tests (separate from src, mirrors src structure)
 ```
 
+## Mana System
+
+A **mana** is an independent knowledge directory (like a wiki). A directory is identified as a mana if it contains a `NAV.md` file at its root. 
+
+### Registering and Initializing Manas
+
+```bash
+# Register an existing directory as a mana
+mana register /path/to/my-research
+
+# See all known manas
+mana list
+
+# Initialize a completely new mana
+mana init /path/to/new-project
+```
+
+### Directory Structure
+
+A generated mana contains the following components:
+- `NAV.md`: Navigation index (identifies dir as a mana, agent reads this first)
+- `schema.md`: LLM conventions for this domain
+- `log.md`: Chronological activity log
+- `inbox.md`: Append-and-review capture area
+- `raw/`: Directory for immutable source documents
+- `pages/`: Directory for LLM-generated synthesized knowledge pages
+- `.agastya/`: Mana-local configuration
+
+---
+
 ## Configuration
 
 Agastya reads its configuration from `~/.agastya/config.yaml`.
