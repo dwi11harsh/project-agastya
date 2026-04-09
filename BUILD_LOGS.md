@@ -42,3 +42,11 @@
 - Instantiated `OpenAIClient` properly inside the factory replacing dummy stubs.
 - Wrote full mock-based test suite verifying API call parity.
 - Committed and pushed to `build` branch.
+
+## Phase 6: Anthropic Client
+- Updated `pyproject.toml` with `anthropic` SDK dependency.
+- Mapped Anthropic API interface via `AsyncAnthropic` client.
+- Implemented `_extract_system_and_messages` separating system-role contexts per API requirements.
+- Implemented streaming delta yielding mechanism.
+- Created fully mocked tests in `tests/test_llm_anthropic.py` targeting API endpoints accurately.
+- Committed and pushed to `build` branch.
