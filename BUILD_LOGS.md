@@ -114,3 +114,10 @@
 - Utilized Textual's `@work(thread=True)` to block inference loads effectively rendering streamed text into the display context dynamically without UI hangups.
 - Authored isolated PyTests handling Dummy LLM Fallbacks bypassing OS Key requirements correctly evaluating mounting bindings.
 - Fully committed safely bounding to `build`.
+
+## Phase 17: TUI Mana Tree Sidebar
+- Implemented `ManaSidebar` inheriting from Textual's core `Tree` component dynamically parsing global configuration directories.
+- Routed internal arrays wrapping `ManaManager.list_all` seamlessly extracting mapped targets actively placing tree leaf nodes.
+- Updated root `AgastyaApp.compose` rendering layout configurations successfully linking `Horizontal` visual frames nesting Chat and Sidebar cleanly side-by-side.
+- Extracted and safely mocked verification tests inside `tests/test_tui_sidebar.py` securing components seamlessly.
+- Successfully committed structural logic cleanly via system.
