@@ -1,6 +1,8 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer
+from textual.containers import Horizontal
 from agastya.tui.chat import ChatWidget
+from agastya.tui.sidebar import ManaSidebar
 
 class AgastyaApp(App):
     """
@@ -18,5 +20,8 @@ class AgastyaApp(App):
     def compose(self) -> ComposeResult:
         """Create child widgets defining the overarching graphical format natively mapping headers and footers."""
         yield Header(show_clock=True)
-        yield ChatWidget()
+        # Wrap logical elements aligning horizontally avoiding standard vertical drops
+        with Horizontal():
+            yield ManaSidebar()
+            yield ChatWidget()
         yield Footer()

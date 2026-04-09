@@ -107,3 +107,10 @@
 - Verified headless pilot test hooks evaluating native `AgastyaApp` executions directly.
 - Overrode generic placeholders inside `cli.py` kicking the UI natively instead of printing generic stubs.
 - Committed safely and pushed.
+
+## Phase 16: TUI Chat Widget & Streaming Logic
+- Designed `ChatWidget` combining terminal Input tracking resolving text outputs iteratively mapping `RichLog`.
+- Captured `on_input_submitted` triggers piping queries into `ContextManager` wrapping asynchronous iterations leveraging `Agent.stream_infer`.
+- Utilized Textual's `@work(thread=True)` to block inference loads effectively rendering streamed text into the display context dynamically without UI hangups.
+- Authored isolated PyTests handling Dummy LLM Fallbacks bypassing OS Key requirements correctly evaluating mounting bindings.
+- Fully committed safely bounding to `build`.
