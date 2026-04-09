@@ -1,0 +1,2 @@
+# This file exists only to create the tests directory.
+# pytest does not require __init__.py in test directories.
