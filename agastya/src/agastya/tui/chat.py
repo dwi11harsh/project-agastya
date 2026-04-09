@@ -19,7 +19,8 @@ class ChatWidget(Vertical):
         try:
             config = ConfigLoader().load()
             profile = config.get_active_profile()
-            self.agent = Agent(profile)
+            from agastya.tools.builtin_registrations import get_master_registry
+            self.agent = Agent(profile, registry=get_master_registry())
         except Exception:
             # Fallback initialization resolving barebones mock profile gracefully in testing
             from agastya.core.config import Profile

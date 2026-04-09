@@ -1,5 +1,5 @@
 import pytest
-from unittest.mock import AsyncMock
+from unittest.mock import AsyncMock, MagicMock
 from typing import AsyncGenerator
 
 from agastya.core.config import Profile
@@ -24,7 +24,7 @@ async def test_openai_client_chat(test_profile, monkeypatch):
         AsyncMock(message=AsyncMock(content="Hello back!"))
     ]
     
-    monkeypatch.setattr("agastya.llm.openai_client.AsyncOpenAI", AsyncMock)
+    monkeypatch.setattr("agastya.llm.openai_client.AsyncOpenAI", MagicMock())
     client = OpenAIClient(test_profile)
     
     # Overwrite the instantiated async openai class sub-objects
@@ -61,7 +61,7 @@ async def test_openai_client_stream(test_profile, monkeypatch):
         yield Chunk(None)
 
     mock_create = AsyncMock(side_effect=mock_stream)
-    monkeypatch.setattr("agastya.llm.openai_client.AsyncOpenAI", AsyncMock)
+    monkeypatch.setattr("agastya.llm.openai_client.AsyncOpenAI", MagicMock())
     
     client = OpenAIClient(test_profile)
     client.client.chat.completions.create = mock_create
@@ -79,7 +79,7 @@ async def test_openai_client_stream(test_profile, monkeypatch):
     )
 
 def test_openai_client_custom_base_url(custom_base_url_profile, monkeypatch):
-    mock_async_openai = AsyncMock()
+    mock_async_openai = MagicMock()
     monkeypatch.setattr("agastya.llm.openai_client.AsyncOpenAI", mock_async_openai)
     
     client = OpenAIClient(custom_base_url_profile)

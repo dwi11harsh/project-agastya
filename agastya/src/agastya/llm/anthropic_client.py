@@ -1,5 +1,5 @@
 import os
-from typing import AsyncIterator
+from typing import AsyncIterator, Optional, Any
 
 from anthropic import AsyncAnthropic
 from anthropic.types import MessageParam
@@ -32,7 +32,7 @@ class AnthropicClient(LLMClient):
                 
         return system_prompt.strip(), chat_messages
 
-    async def chat(self, messages: list[Message]) -> str:
+    async def chat(self, messages: list[Message], tools: Optional[list[dict]] = None) -> str:
         system_prompt, chat_messages = self._extract_system_and_messages(messages)
         
         response = await self.client.messages.create(
@@ -43,7 +43,7 @@ class AnthropicClient(LLMClient):
         )
         return response.content[0].text
 
-    async def stream_chat(self, messages: list[Message]) -> AsyncIterator[str]:
+    async def stream_chat(self, messages: list[Message], tools: Optional[list[dict]] = None) -> AsyncIterator[Any]:
         system_prompt, chat_messages = self._extract_system_and_messages(messages)
         
         stream = await self.client.messages.create(

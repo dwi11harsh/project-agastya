@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ideafile.md",
+                "file": "agastya/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ideafile"
+              "title": "README"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ideafile.md",
+                "file": "agastya/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ideafile"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ideafile.md",
+                "file": "agastya/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from ideafile"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ideafile.md",
+                "file": "agastya/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ideafile"
+              "title": "Outline of README"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "d05c6fe256a4c5de",
   "lastOpenFiles": [
+    "agastya/src/agastya/tools/builtin_registrations.py",
+    "ideafile.md",
     "agastya/src/agastya/tools/__pycache__/tavily.cpython-312.pyc",
     "agastya/src/agastya/tools/__pycache__/registry.cpython-312.pyc",
     "agastya/src/agastya/tools/__pycache__",
@@ -196,7 +198,6 @@
     "Building Agastya Knowledge Agent.md",
     "agastya/src/agastya/tui/__pycache__/sidebar.cpython-312.pyc",
     "agastya/tests/__pycache__/test_tui_sidebar.cpython-312-pytest-9.0.3.pyc",
-    "agastya/tests/test_tui_sidebar.py",
     "BUILD_LOGS.md",
     "agastya/README.md",
     "Building A Personal LLM Agent.md",

@@ -121,3 +121,10 @@
 - Updated root `AgastyaApp.compose` rendering layout configurations successfully linking `Horizontal` visual frames nesting Chat and Sidebar cleanly side-by-side.
 - Extracted and safely mocked verification tests inside `tests/test_tui_sidebar.py` securing components seamlessly.
 - Successfully committed structural logic cleanly via system.
+
+## Phase 18: Shipped Tool Descriptions
+- Created generic `ToolRegistry` exposing base Python methods towards standardized Anthropic/OpenAI schema metadata outputs inherently.
+- Integrated `tavily-python` implementing explicit fallbacks correctly parsing OS parameters resolving safely natively.
+- Developed the `TavilySearcher` wrapping queries gracefully resolving explicit markdown mapping outputs avoiding network collapse endpoints.
+- Developed `tests/test_tools.py` evaluating native tool executions verifying schemas inherently mapping dummy injections.
+- Fully committed logic to `build` establishing dynamic capabilities globally.
