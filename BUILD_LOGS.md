@@ -25,3 +25,11 @@
 - Wrapped it all inside comprehensive pytest cases.
 - Updated `README.md` with "Mana System" documentation.
 - Committed and pushed to `build` branch under "feat: mana discovery, registration, and init".
+
+## Phase 4: LLM Client Abstraction
+- Implemented `Message` dataclass representing a chat query.
+- Implemented `LLMClient` protocol establishing inference methods (chat and streaming).
+- Implemented `LLMClientFactory` serving provider models.
+- Wrote full test coverage in `tests/test_llm_base.py`.
+- Updated `README.md` to add LLM Providers.
+- Committed and pushed to `build` branch under "feat: LLM client protocol and factory".

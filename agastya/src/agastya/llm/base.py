@@ -25,11 +25,8 @@ class LLMClientFactory:
     def create(cls, profile: Profile) -> LLMClient:
         provider = profile.provider.lower()
         if provider in ["openai", "openrouter", "gemini", "ollama"]:
-            # Note: actual implementations for OpenAI compatible clients and Anthropic client 
-            # will be provided in subsequent phases. 
-            # For now, it serves as abstract factory structure.
-            # In Phase 5/6 we will replace these dummy raises with real instantiations.
-            pass
+            from agastya.llm.openai_client import OpenAIClient
+            return OpenAIClient(profile)
         elif provider == "anthropic":
             pass
         else:
