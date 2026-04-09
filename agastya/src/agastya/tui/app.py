@@ -1,5 +1,6 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer
+from agastya.tui.chat import ChatWidget
 
 class AgastyaApp(App):
     """
@@ -17,5 +18,5 @@ class AgastyaApp(App):
     def compose(self) -> ComposeResult:
         """Create child widgets defining the overarching graphical format natively mapping headers and footers."""
         yield Header(show_clock=True)
-        # Placeholder for graphical injection points mapping sidebar and chat outputs safely.
+        yield ChatWidget()
         yield Footer()
