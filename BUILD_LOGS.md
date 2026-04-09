@@ -33,3 +33,12 @@
 - Wrote full test coverage in `tests/test_llm_base.py`.
 - Updated `README.md` to add LLM Providers.
 - Committed and pushed to `build` branch under "feat: LLM client protocol and factory".
+
+## Phase 5: OpenAI-Compatible Client
+- Updated `pyproject.toml` with `openai` SDK dependency.
+- Mapped OpenAI API interface via `AsyncOpenAI` instance mapping our abstract `Message` to completion creation.
+- Implemented streaming iterator bridging API delta chunks to our system's generator context.
+- Implemented bypass logic for proxy models requiring dummy api_keys.
+- Instantiated `OpenAIClient` properly inside the factory replacing dummy stubs.
+- Wrote full mock-based test suite verifying API call parity.
+- Committed and pushed to `build` branch.

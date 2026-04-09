@@ -28,7 +28,8 @@ class LLMClientFactory:
             from agastya.llm.openai_client import OpenAIClient
             return OpenAIClient(profile)
         elif provider == "anthropic":
-            pass
+            from agastya.llm.anthropic_client import AnthropicClient
+            return AnthropicClient(profile)
         else:
             raise ValueError(f"Unknown LLM provider: {profile.provider}")
         
