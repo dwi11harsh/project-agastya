@@ -73,6 +73,14 @@ A generated mana contains the following components:
 - `pages/`: Directory for LLM-generated synthesized knowledge pages
 - `.agastya/`: Mana-local configuration
 
+### Execution & Confirmation UX
+
+Agastya implements a strictly bound sandbox for generic operations using tool definitions. None of the native LLM requests operate invisibly if they hit the OS filesystem directly outside of its internal mana domains. 
+Whenever Agastya tries to use a shell executable via its internal Tools structure to process state, a TUI confirmation block holds execution and asks the user to either:
+- `[✓ Run]`: Automatically spin out the requested command block via asyncio.
+- `[✗ Deny]`: Cancels and feeds back rejection to the agent context securely.
+- `[✎ Edit]`: Replaces the prompted command manually by user intent and overrides execution safely.
+
 ---
 
 ## Configuration
