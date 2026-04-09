@@ -5,8 +5,10 @@ from pathlib import Path
 from agastya.mana.manager import ManaManager
 
 def launch_tui():
-    """Shell placeholder mapping future textal components loading loop execution natively."""
-    print("Launching Agastya Terminal UI Layer (Phase 15+ implementation mapping pending).")
+    """Boots the primary async graphical execution interface natively mapped by Textual framework."""
+    from agastya.tui.app import AgastyaApp
+    app = AgastyaApp()
+    app.run()
 
 def main():
     parser = argparse.ArgumentParser(
