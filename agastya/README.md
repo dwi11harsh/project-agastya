@@ -45,6 +45,29 @@ agastya/
 └── tests/                  # All tests (separate from src, mirrors src structure)
 ```
 
+## Configuration
+
+Agastya reads its configuration from `~/.agastya/config.yaml`.
+
+```yaml
+default_profile: deep
+profiles:
+  deep:
+    provider: anthropic
+    model: claude-3-opus-20240229
+    description: "Deep thinking"
+  local:
+    provider: ollama
+    model: llama3
+    base_url: http://localhost:11434
+    description: "Offline, private"
+
+features:
+  blog_generation: true
+  tweet_generation: true
+  tweet_generation_locked: false
+```
+
 ---
 
 ## Getting Started
