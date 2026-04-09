@@ -98,6 +98,20 @@ features:
   tweet_generation_locked: false
 ```
 
+## LLM Providers
+
+Agastya abstracts all text generation behind a unified `LLMClient` protocol. Multiple LLM providers are natively supported:
+
+| Provider | Client Implementation | Notes |
+|----------|-----------------------|-------|
+| OpenAI | OpenAI-compatible | Default GPT-4/o1 endpoints |
+| Gemini | OpenAI-compatible | Requires Google base URL override |
+| Ollama | OpenAI-compatible | Local offline open-source models |
+| OpenRouter | OpenAI-compatible | Multi-model routing |
+| Anthropic | Anthropic SDK native | For Claude (Sonnet, Opus) |
+
+You can specify which provider to use per `Profile` configured in `config.yaml`.
+
 ---
 
 ## Getting Started

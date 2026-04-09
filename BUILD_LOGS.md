@@ -17,3 +17,11 @@
 - Updated `README.md` with Configuration section.
 - Verified test success.
 - Committed and pushed to `build` branch under commit "feat: config loading with profiles and feature flags".
+
+## Phase 3: Mana Discovery & Validation
+- Created `ManaInfo` and `ManaManager` classes.
+- Implemented core mana functionality: checking if a dir is a mana (`NAV.md` existence), memory yaml registry management (register, unregister, list_all).
+- Implemented mana initialization setting up directory structure (`schema.md`, `log.md`, `inbox.md`, `raw/`, etc.).
+- Wrapped it all inside comprehensive pytest cases.
+- Updated `README.md` with "Mana System" documentation.
+- Committed and pushed to `build` branch under "feat: mana discovery, registration, and init".
